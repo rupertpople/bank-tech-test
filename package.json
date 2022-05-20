@@ -19,5 +19,8 @@
   "homepage": "https://github.com/rupertpople/bank-tech-test#readme",
   "dependencies": {
     "jest": "^28.1.0"
+  },
+  "devDependencies": {
+    "mockdate": "^3.0.5"
   }
 }

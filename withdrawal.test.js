@@ -17,7 +17,7 @@ describe('Withdrawal class', () => {
 
     })
 
-    test('#info stores the amount and date in format DD-MM-YYYY in array', () =>{
+    test('#info stores the amount and date in format DD-MM-YYYY in an object', () =>{
         let withdrawal = new Withdrawal(500);
         expect(withdrawal.info()).toEqual({type:'Withdrawal', amount:500, date:'20/05/2022'});
     })

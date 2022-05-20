@@ -17,8 +17,8 @@ describe('Deposit class', () => {
 
     })
 
-    test('#info stores the amount and date in format DD-MM-YYYY in array', () =>{
+    test('#info stores the amount and date in format DD-MM-YYYY in an object', () =>{
         let deposit = new Deposit(500);
-        expect(deposit.info()).toEqual({type:'Deposit', amount:500, date:'20/05/2022'});
+        expect(deposit.info()).toEqual({type:'Deposit', amount:500.00, date:'20/05/2022'});
     })
 })
