@@ -22,7 +22,6 @@ class BankAccount {
         return formattedAccounts.join('\r\n');
     }
     
-
     #depositUpdateBalanceandHistory(deposit){
         this.balance += deposit.amount
         const depositinfo = deposit.info()
