@@ -1,9 +1,9 @@
 # Bank Tech Test #
 
 ## Project Description ##
-To create a programme that allows users to create an account, deposit funds, withdraw funds and view a detailed balance.
+To create a programme that allows users to deposit funds, withdraw funds and view a detailed balance.
 
-Created by [Named Link]([https://github.com/rupertpople]"Rupert Pople")
+Created by [Rupert Pople"](https://github.com/rupertpople)
 ### Features ###
 *Users can create an account.
 *Users can deposit into their account.
@@ -14,9 +14,16 @@ Created by [Named Link]([https://github.com/rupertpople]"Rupert Pople")
   *The balance.
 
 ### Technologies Used ###
+[Node.js](https://nodejs.org/en/)
+[Jest](https://jestjs.io/)
 
-## How to install and run ##
-## How to use the software ##
+## How to Install and Run ##
+Install NPM
+Install Node.js
+Install Jest
+
+## How to Use the Software ##
+
 
 
 
