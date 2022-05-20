@@ -14,12 +14,12 @@ class Deposit{
         if (mm < 10) {
             mm = '0'+mm;
         } 
-        this.date = dd+'-'+mm+'-'+yyyy
+        this.date = dd+'/'+mm+'/'+yyyy
         return this.date
     }
 
     info() {
-        return [this.amount, this.formatDate()]
+        return { type: 'Deposit', amount: this.amount, date: this.formatDate() }
     }
 }
 

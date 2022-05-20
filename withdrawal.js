@@ -14,12 +14,12 @@ class Withdrawal{
         if (mm < 10) {
             mm = '0'+mm;
         } 
-        this.date = dd+'-'+mm+'-'+yyyy
+        this.date = dd+'/'+mm+'/'+yyyy
         return this.date
     }
 
     info() {
-        return [this.amount, this.formatDate()]
+        return { type: 'Withdrawal', amount: this.amount, date: this.formatDate() }
     }
 }
 
