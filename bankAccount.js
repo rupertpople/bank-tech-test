@@ -9,7 +9,7 @@ class BankAccount {
 
     deposit(amount){
         const deposit = new Deposit(amount);
-        this.#depositUpdateBalanceandHistory(deposit)
+        this.#depositUpdateBalanceandHistory(deposit);
     }
 
     withdraw(amount){
@@ -23,16 +23,16 @@ class BankAccount {
     }
     
     #depositUpdateBalanceandHistory(deposit){
-        this.balance += deposit.amount
-        const depositinfo = deposit.info()
-        depositinfo['balance'] = this.balance
+        this.balance += deposit.amount;
+        const depositinfo = deposit.info();
+        depositinfo['balance'] = this.balance;
         this.accountHistory.push(depositinfo);
     }
 
     #withdrawalUpdateBalanceandHistory(deposit){
-        this.balance -= deposit.amount
-        const depositinfo = deposit.info()
-        depositinfo['balance'] = this.balance
+        this.balance -= deposit.amount;
+        const depositinfo = deposit.info();
+        depositinfo['balance'] = this.balance;
         this.accountHistory.push(depositinfo);
     }
 
@@ -43,10 +43,10 @@ class BankAccount {
             } else {
                 return `${action.date} || || ${action.amount.toFixed(2)} || ${action.balance.toFixed(2)}`;
             }
-        })
-        formattedHistory.push('date || credit || debit || balance')
-        formattedHistory.reverse()
-        return formattedHistory
+        });
+        formattedHistory.push('date || credit || debit || balance');
+        formattedHistory.reverse();
+        return formattedHistory;
     }
 
 }

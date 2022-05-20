@@ -12,8 +12,8 @@ describe('Deposit class', () => {
     })
 
     test('#formatDate creates the date format DD-MM-YYY', () => {
-        let deposit = new Deposit(500)
-        expect(deposit.formatDate()).toEqual('20/05/2022')
+        let deposit = new Deposit(500);
+        expect(deposit.formatDate()).toEqual('20/05/2022');
 
     })
 

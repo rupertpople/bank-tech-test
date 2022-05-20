@@ -12,8 +12,8 @@ describe('Withdrawal class', () => {
     })
 
     test('#formatDate creates the date format DD-MM-YYY', () => {
-        let withdrawal = new Withdrawal(500)
-        expect(withdrawal.formatDate()).toEqual('20/05/2022')
+        let withdrawal = new Withdrawal(500);
+        expect(withdrawal.formatDate()).toEqual('20/05/2022');
 
     })
 

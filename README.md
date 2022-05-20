@@ -59,6 +59,31 @@ Created by [Rupert Pople](https://github.com/rupertpople)
   bankAccount.printStatement();
   ```  
 
+## Coding strategy ##
+1. I identified 3 classes to work with; BankAccount, Deposit and Withdrawal.  
+  * BankAccount - constructs with accountHistory = [], balance = 0
+  * Deposit - recieves the amount as an argument.
+  * Withdrawal - recieves the amount as an argument.
+
+2. The Deposit and Withdrawal classes are created when the using the BankAccount.deposit() and BankAccount.withdrawal(). They are designed to store basic information:
+  * Type of action; 'Deposit' or 'Withdrawal'.
+  * The amount, which is given as input when using BankAccount.deposit(eg.500) and BankAccount.withdraw(eg.500).
+  * The date in the format 'DD/MM/YYYY'.  
+
+3. When these methods are called, a private method is called (depending on whether it is a deposit or withdrawal) that implements a few steps:
+  * Extracts the key information from the Deposit or Withdrawal class.
+  * Adds the current balance to this information.
+  * Adds this information as an object to the BankAccount.accountHistory.  
+
+4. The BankAccount.printStatement() has two parts:
+  * The first is to create a variable that saves the data returned from a private method.
+  * This private method formats the BankAccount.accountHistory. 
+  * It achieves the specified structure by mapping a new array. This contains multiple strings, each to be a line displaying a transaction. 
+  * The header of the balance 'date || credit || debit || balance' is pushed to the back of the array.
+  * Finally, the array is reversed to get each line in the right order, with the header at the top latest transactions at the top.
+  * The second line of the printStatement uses .join('\r\n') to connect each string on a new line to get the desired format.  
+
+  5. The MockDate npm package allows the date to mocked, in order to avoid retesting leading to failues. This was especially important for the last test where the date is changed between each deposit and withdrawal.
 
 
 

@@ -1,11 +1,11 @@
 class Withdrawal{
     constructor(amount) {
-        this.amount = amount
+        this.amount = amount;
     }
 
     formatDate() {
         const today = new Date();
-        var dd = today.getDate()
+        var dd = today.getDate();
         var mm = today.getMonth()+1;
         const yyyy = today.getFullYear();
         if (dd < 10) {
@@ -14,12 +14,12 @@ class Withdrawal{
         if (mm < 10) {
             mm = '0'+mm;
         } 
-        this.date = dd+'/'+mm+'/'+yyyy
-        return this.date
+        this.date = dd+'/'+mm+'/'+yyyy;
+        return this.date;
     }
 
     info() {
-        return { type: 'Withdrawal', amount: this.amount, date: this.formatDate() }
+        return { type: 'Withdrawal', amount: this.amount, date: this.formatDate() };
     }
 }
 
