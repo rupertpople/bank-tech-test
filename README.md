@@ -14,9 +14,9 @@ Created by [Rupert Pople](https://github.com/rupertpople)
   * The balance.
 
 ### Technologies Used ###
-* [Node.js](https://nodejs.org/en/)
-* [Jest](https://jestjs.io/)
-* [MockDate](https://www.npmjs.com/package/mockdate)
+* [Node.js](https://nodejs.org/en/) for runtime Javascript.
+* [Jest](https://jestjs.io/) for testing.
+* [MockDate](https://www.npmjs.com/package/mockdate) for mocking dates.
 
 ## How to Install and Run ##
 ### 1. Install NPM ###
