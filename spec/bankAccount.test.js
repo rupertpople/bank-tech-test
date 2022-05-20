@@ -1,4 +1,4 @@
-const BankAccount = require ('./bankAccount');
+const BankAccount = require ('../lib/bankAccount');
 const MockDate = require('mockdate')
 
 describe('BankAccount class', () => {

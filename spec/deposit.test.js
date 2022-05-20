@@ -1,4 +1,4 @@
-const Deposit = require ('./deposit')
+const Deposit = require ('../lib/deposit')
 
 describe('Deposit class', () => {
 

@@ -3,7 +3,7 @@
 ## Project Description ##
 This programme allows users to deposit funds and withdraw funds, and view a detailed balance.
 
-Created by [Rupert Pople](https://github.com/rupertpople)
+Created by [Rupert Pople](https://github.com/rupertpople).
 ### Features ###
 * Users can create an account.
 * Users can deposit into their account.
@@ -85,6 +85,8 @@ Created by [Rupert Pople](https://github.com/rupertpople)
 
   5. **The MockDate npm package allows the date to mocked, in order to avoid retesting leading to failues. This was especially important for the last test where the date is changed between each deposit and withdrawal.**
 
+## Important Note! ##
+When returning
 
 
 
