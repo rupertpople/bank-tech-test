@@ -91,7 +91,9 @@ Created by [Rupert Pople](https://github.com/rupertpople).
     6. The second line of the BankAccount.printStatement uses .join('\r\n') on this mapped array to connect each string with line breaks to get the desired format.
 
   5. **Notes about testing.**
+
     1. The MockDate npm package allows the date to mocked, in order to avoid retesting leading to failues. This was especially important for the last test where the date is changed between each deposit and withdrawal.
+    
     2. In order order to get the desired output for the BankAccount.printStatement() method, console.log was used in place of return. As a result the test runs BankAccount.printStatement() and then checks the last object called on the console.log, in place of using toEqual to view the output of the method directly.
 
 
