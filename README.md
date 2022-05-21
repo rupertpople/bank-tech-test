@@ -59,6 +59,9 @@ Created by [Rupert Pople](https://github.com/rupertpople).
   bankAccount.printStatement();
   ```  
 
+  ![bank tech test](public/images/programme in use.png)
+
+
 ## Coding strategy ##
 1. **Identified 3 classes to work with; BankAccount, Transaction and Statement.**  
     1. **BankAccount():**
@@ -90,7 +93,6 @@ Created by [Rupert Pople](https://github.com/rupertpople).
     5. Finally, the array is reversed to get each line in the right order, with the header at the top, followed by the latest transactions.
     6. A second private method formats the array into a string with line breaks.
     7. The printStatement variable in the Bank Class then creates the output using console.log.
- 
 
 
 
