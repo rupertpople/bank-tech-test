@@ -1,7 +1,7 @@
 # Bank Tech Test #
 
 ## Project Description ##
-This programme allows users to deposit funds and withdraw funds, and view a detailed balance.
+This programme allows users to create a bank account, make transactions and print their bank statement.
 
 Created by [Rupert Pople](https://github.com/rupertpople).
 ### Features ###
@@ -60,33 +60,40 @@ Created by [Rupert Pople](https://github.com/rupertpople).
   ```  
 
 ## Coding strategy ##
-1. **I identified 3 classes to work with; BankAccount, Deposit and Withdrawal.**  
-    * BankAccount - constructs with accountHistory = [] and balance = 0.
-    * Deposit - receives the amount as an argument.
-    * Withdrawal - receives the amount as an argument.
+1. **Identified 3 classes to work with; BankAccount, Transaction and Statement.**  
+    1. **BankAccount():**
+      * Constructs with accountHistory = [] and balance = 0.
+      * 3 accessible methods - deposit(amount), withdraw(amount) and printStatement().
+    2. **Transaction(amount):**
+      * Constructs with amount as input.
+      * Has the purpose of storing the amount transacted and the date of transaction in an object.
+    3. **Statement([{transaction data}]):**
+      * Constructs from the BankAccount.accountHistory array of objects containing transaction data as an input.
+      * Has the purpose of formatting the transaction history as specified.
 
-2. **The Deposit and Withdrawal classes are created when using the BankAccount.deposit() and BankAccount.withdrawal(). They are designed to store basic information:**
-    * Type of action; 'Deposit' or 'Withdrawal'.
-    * The amount, which is given as an input when using BankAccount.deposit(eg.500) and BankAccount.withdraw(eg.500).
-    * The date in the format 'DD/MM/YYYY'.  
+2. **The Transaction class is called when the BankAccount class uses the deposit or withdraw method with the given amount**
+    1. The amount is directly passed into to the Transaction class:
+     * BankAccount.deposit(500) => new Transaction(500)
+     * BankAccount.withdraw(500) => new Transaction(500)
+    2. The amount and formatted date 'DD/MM/YYYY' is returned as an object using the Transaction.info() method.
 
-3. **When these methods are called, a private method is called (depending on whether it is a deposit or withdrawal) that implements a few steps:**
-    * Extracts the key information from the Deposit or Withdrawal class.
-    * Adds the current balance to this information.
-    * Adds this information as an object to the BankAccount.accountHistory.  
+3. **When deposit or withdraw methods are used, a private method is called (depending on what type of transaction it is) that implements a few steps:**
+    1. Extracts the key information from the Transaction class to a variable.
+    2. Adds the type(withdrawal or deposit) and current balance to this object.
+    3. Adds this information as an object to the BankAccount.accountHistory array.
 
-4. **The BankAccount.printStatement() has two parts:**
-    * The first is to create a variable that saves the data returned from a private method.
-    * This private method formats the BankAccount.accountHistory. 
-    * It achieves the specified structure by mapping a new array. This new array contains multiple strings, each being a line displaying a transaction. 
-    * The header of the staement **'date || credit || debit || balance'** is pushed to the back of the array.
-    * Finally, the array is reversed to get each line in the right order, with the header at the top, followed by the latest transactions.
-    * The second line of the printStatement uses .join('\r\n') on this mapped array to connect each string with line breaks to get the desired format.
+4. **The BankAccount.printStatement() has two parts; call a new Statement class which formats the statement and then output this to the console.**
+    1. The Statement class is contructed with the BankAccount.accountHistory as an input.
+    2. Next the Statement.printStatement() method is called, which creates a new variable that takes the output of a private method.
+    3. This private method maps a new array which formats each object into a string to match the specified criteria.
+    4. A string: **'date || credit || debit || balance'** is pushed to the end of the array, which will be the header.
+    5. Finally, the array is reversed to get each line in the right order, with the header at the top, followed by the latest transactions.
+    6. The second line of the BankAccount.printStatement uses .join('\r\n') on this mapped array to connect each string with line breaks to get the desired format.
 
-  5. **The MockDate npm package allows the date to mocked, in order to avoid retesting leading to failues. This was especially important for the last test where the date is changed between each deposit and withdrawal.**
+  5. **Notes about testing.**
+    * The MockDate npm package allows the date to mocked, in order to avoid retesting leading to failues. This was especially important for the last test where the date is changed between each deposit and withdrawal.
+    * In order order to get the desired output for the BankAccount.printStatement() method, console.log was used in place of return. As a result the test runs BankAccount.printStatement() and then checks the last object called on the console.log, in place of using toEqual to view the output of the method directly.
 
-## Important Note! ##
-When returning
 
 
 
