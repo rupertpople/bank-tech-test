@@ -59,7 +59,7 @@ Created by [Rupert Pople](https://github.com/rupertpople).
   bankAccount.printStatement();
   ```  
 
-  ![bank tech test](public/images/programme in use.png)
+  ![bank tech test](https://github.com/rupertpople/bank-tech-test/blob/main/public/images/programme%20in%20use.pngg)
 
 
 ## Coding strategy ##
