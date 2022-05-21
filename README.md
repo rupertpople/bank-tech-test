@@ -88,7 +88,8 @@ Created by [Rupert Pople](https://github.com/rupertpople).
     3. This private method maps a new array which formats each object into a string to match the specified criteria.
     4. A string: **'date || credit || debit || balance'** is pushed to the end of the array, which will be the header.
     5. Finally, the array is reversed to get each line in the right order, with the header at the top, followed by the latest transactions.
-    6. The second line of the BankAccount.printStatement uses .join('\r\n') on this mapped array to connect each string with line breaks to get the desired format.
+    6. A second private method formats the array into a string with line breaks.
+    7. The printStatement variable in the Bank Class then creates the output using console.log.
  
 
 
